@@ -30,10 +30,19 @@
     background-color: $white;
     .header {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       border-radius: 5px 5px 0 0;
       background-color: #8a817c;
+      .header__title {
+        color: $white;
+        padding: {
+          top: 7px;
+          left: 10px;
+          right: 10px;
+          bottom: 5px;
+        }
+      }
       .header__btn--close {
         color: $white;
         cursor: pointer;

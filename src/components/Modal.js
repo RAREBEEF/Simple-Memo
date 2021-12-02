@@ -38,6 +38,7 @@ export default function Modal({ setModalActive, checked, setChecked }) {
       ></div>
       <div className={classNames(styles["modal__window"])}>
         <div className={classNames(styles["header"])}>
+          <div className={classNames(styles["header__title"])}>Notice</div>
           <div
             className={classNames(styles["header__btn--close"])}
             onClick={close}
@@ -46,7 +47,7 @@ export default function Modal({ setModalActive, checked, setChecked }) {
           </div>
         </div>
         <div className={classNames(styles["main"])}>
-          메모를 삭제하시겠습니까?
+          Are you sure you want to delete?
         </div>
         <div className={classNames(styles["btn-group"])}>
           <div

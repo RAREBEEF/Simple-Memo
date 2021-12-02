@@ -1,11 +1,18 @@
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 570px) {
   .container {
     width: 95% !important;
   }
 }
 .container {
   $light-gray: #bcb8b1;
-
+  .not-found {
+    // border: 1px solid gray;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+  }
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -13,4 +20,17 @@
   min-width: 200px;
   height: 75vh;
   background-color: $light-gray;
+  .not-found {
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    padding: {
+      top: 3px;
+      left: 3px;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }

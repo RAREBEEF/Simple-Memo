@@ -4,17 +4,25 @@ import { useCallback, useState } from "react";
 import gsap from "gsap";
 import Toolbar from "./Toolbar";
 import { useNavigate, useParams } from "react-router";
+// import MemoList from "./MemoList";
 
 export default function TextInput() {
   // 현재 페이지의 id를 받아오기(id가 있다면 Edit memo, 없다면 New memo로 구분할 용도)
   const id = useParams().id;
 
+  // 페이지 이동에 사용할 navigate
+  const navigate = useNavigate();
+
   // input value state 정의, Edit memo일 경우 초기값으로 기존 메모 내용을 부여한다.
   const [valueTitle, setValueTitle] = useState(() => {
-    return id ? JSON.parse(localStorage.getItem(id)).title : "";
+    return id && JSON.parse(localStorage.getItem(id))
+      ? JSON.parse(localStorage.getItem(id)).title
+      : "";
   });
   const [valueMemo, setValueMemo] = useState(() => {
-    return id ? JSON.parse(localStorage.getItem(id)).memo : "";
+    return id && JSON.parse(localStorage.getItem(id))
+      ? JSON.parse(localStorage.getItem(id)).memo
+      : "";
   });
 
   // input을 통한 state 업데이트
@@ -24,9 +32,6 @@ export default function TextInput() {
   const changeMemo = useCallback((e) => {
     setValueMemo(e.target.value);
   }, []);
-
-  // 페이지 이동에 사용할 navigate
-  const navigate = useNavigate();
 
   // 진동 효과
   const vibrate = useCallback((classname, degree) => {
@@ -83,14 +88,14 @@ export default function TextInput() {
           className={classNames(styles["input"], styles["input--title"])}
           value={valueTitle}
           onChange={changeTitle}
-          placeholder="제목"
+          placeholder="Title"
           maxLength="26"
         />
         <textarea
           className={classNames(styles["input"], styles["input--memo"])}
           value={valueMemo}
           onChange={changeMemo}
-          placeholder="내용"
+          placeholder="Content"
         />
         <div
           className={classNames(styles["btn--upload"], styles["btn"])}
