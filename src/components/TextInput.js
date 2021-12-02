@@ -95,9 +95,7 @@ export default function TextInput() {
           className={classNames(styles["input"], styles["input--memo"])}
           value={valueMemo}
           onChange={changeMemo}
-          placeholder={`Content 
-
-When accessing with iPhone's private browsing, the memo disappears when the tab is closed.`}
+          placeholder="Content"
         />
         <div
           className={classNames(styles["btn--upload"], styles["btn"])}
