@@ -80,40 +80,45 @@ export default function Toolbar({ checked, setChecked, setSearchRegexp }) {
           setChecked={setChecked}
         />
       )}
-      {!url[3] ? (
-        <input
-          className={classNames(styles["search"])}
-          value={valueSearch}
-          onChange={changeSearch}
-          placeholder="Search"
-        />
-      ) : (
-        <NavLink
-          className={classNames(styles["btn"], styles["btn--list"])}
-          to={"/"}
-        >
-          List
-        </NavLink>
-      )}
-      {!url[3] && !id ? (
-        <NavLink
-          className={classNames(styles["btn"], styles["btn--input"])}
-          to={"/input"}
-        >
-          New
-          <span className={classNames(styles["text--disappear"])}> memo</span>
-        </NavLink>
-      ) : (
-        url[3] !== "input" && (
+      <div className={classNames(styles["tool--left"])}>
+        {!url[3] ? (
+          <input
+            className={classNames(styles["search"])}
+            value={valueSearch}
+            onChange={changeSearch}
+            placeholder="Search"
+          />
+        ) : (
+          <NavLink
+            className={classNames(styles["btn"], styles["btn--list"])}
+            to={"/"}
+          >
+            List
+          </NavLink>
+        )}
+        {!url[3] && !id ? (
           <NavLink
             className={classNames(styles["btn"], styles["btn--input"])}
-            to={`/input/${id}`}
+            to={"/input"}
           >
-            Edit
+            New
             <span className={classNames(styles["text--disappear"])}> memo</span>
           </NavLink>
-        )
-      )}
+        ) : (
+          url[3] !== "input" && (
+            <NavLink
+              className={classNames(styles["btn"], styles["btn--input"])}
+              to={`/input/${id}`}
+            >
+              Edit
+              <span className={classNames(styles["text--disappear"])}>
+                {" "}
+                memo
+              </span>
+            </NavLink>
+          )
+        )}
+      </div>
       <div className={classNames(styles["tool--right"])}>
         <div
           className={classNames(
