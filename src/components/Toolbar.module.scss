@@ -49,7 +49,7 @@
   }
   .search {
     transition: all 0.2s;
-    width: 55px;
+    width: 57px;
     height: 29px;
     border: none;
     border-radius: 5px;
@@ -120,7 +120,10 @@
       color: $dark-brown;
     }
     &.btn--list {
-      width: 55px;
+      width: 57px;
+    }
+    &.btn--input {
+      white-space:nowrap;
     }
     &.btn--delete {
       background-color: $pink;
