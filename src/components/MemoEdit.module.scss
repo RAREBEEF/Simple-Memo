@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  border: 1px solid gray;
+  margin: 0 auto 0;
+  padding: 0 0 10px;
+  height: 70vh;
+  .input-group {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    .input--title {
+      outline: none;
+      flex-grow: 0.5;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .input--memo {
+      resize: none;
+      outline: none;
+      flex-grow: 10;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .btn--upload {
+      transition: all 0.2s;
+      // width: 10%;
+      border: 1px solid gray;
+      text-align: center;
+      cursor: pointer;
+      // border-radius: 10px;
+      flex-grow: 0.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background-color: rgb(197, 197, 197);
+      }
+    }
+  }
+}

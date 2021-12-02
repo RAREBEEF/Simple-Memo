@@ -1,0 +1,20 @@
+.container {
+  $dark-brown: #463f3a;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  // width: 100%;
+  .title {
+    // flex-grow: 1;
+    // text-align: center;
+    word-break: keep-all;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    color: $dark-brown;
+  }
+}
