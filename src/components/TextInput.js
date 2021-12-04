@@ -4,7 +4,6 @@ import { useCallback, useState } from "react";
 import gsap from "gsap";
 import Toolbar from "./Toolbar";
 import { useNavigate, useParams } from "react-router";
-// import MemoList from "./MemoList";
 
 export default function TextInput() {
   // 현재 페이지의 id를 받아오기(id가 있다면 Edit memo, 없다면 New memo로 구분할 용도)

@@ -7,7 +7,7 @@ export default class ErrorFilter extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div>
+        <div style={{ padding: "20px" }}>
           <div>Sorry!</div>
           <div>An unexpected error has occurred.</div>
           <div>Please send your feedback to the email below.</div>

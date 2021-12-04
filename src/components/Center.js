@@ -8,7 +8,7 @@ import ErrorFilter from "./ErrorFilter";
 export default function Center() {
   return (
     <div className={classNames(styles["container"])}>
-      <div className={classNames(styles["not-found"])}>404 Not Found.</div>
+      <div className={classNames(styles["not-found"])}>404 Not Found. </div>
       <BrowserRouter>
         <Routes>
           <Route path="/memo/:id" element={<MemoView />}></Route>

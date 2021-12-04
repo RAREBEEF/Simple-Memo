@@ -2,17 +2,9 @@ import classNames from "classnames";
 import { useParams } from "react-router";
 import styles from "./MemoView.module.scss";
 import Toolbar from "./Toolbar";
-// import MemoList from "./MemoList";
 
 export default function MemoView(props) {
   const id = useParams().id;
-  // if (!JSON.parse(localStorage.getItem(id))) {
-  //   return (
-  //     <div>
-  //       <MemoList />
-  //     </div>
-  //   );
-  // } else {
   return (
     <div className={classNames(styles["container"])}>
       <Toolbar />
@@ -32,4 +24,3 @@ export default function MemoView(props) {
     </div>
   );
 }
-// }

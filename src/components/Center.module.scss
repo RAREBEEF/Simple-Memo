@@ -6,7 +6,6 @@
 .container {
   $light-gray: #bcb8b1;
   .not-found {
-    // border: 1px solid gray;
     position: absolute;
     z-index: 0;
     text-align: center;
@@ -18,7 +17,7 @@
   border-radius: 5px;
   width: 70%;
   min-width: 200px;
-  height: 75vh;
+  height: 70vh;
   background-color: $light-gray;
   .not-found {
     position: absolute;
