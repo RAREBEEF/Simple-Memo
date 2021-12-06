@@ -2,9 +2,6 @@
   .text--disappear {
     display: none;
   }
-  .search:focus {
-    // width: calc(100% - 10px - 53px - 9.2px) !important;
-  }
 }
 
 .container {
@@ -14,9 +11,9 @@
   $gray: #8a817c;
   $pink: #e0afa0;
 
-  -webkit-user-select: none; 
-  -moz-user-select: none; 
-  -ms-user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 
   z-index: 1;
@@ -130,7 +127,7 @@
       width: 60px;
     }
     &.btn--input {
-      white-space:nowrap;
+      white-space: nowrap;
     }
     &.btn--delete {
       background-color: $pink;
