@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Toolbar from "./Toolbar";
 import { useNavigate, useParams } from "react-router";
 
-export default function TextInput() {
+export default function TextInput({ vh }) {
   // 현재 페이지의 id를 받아오기(id가 있다면 Edit memo, 없다면 New memo로 구분할 용도)
   const id = useParams().id;
 
@@ -80,7 +80,10 @@ export default function TextInput() {
   }, [navigate, valueMemo, valueTitle, id, vibrate]);
 
   return (
-    <div className={classNames(styles["container"])}>
+    <div
+      className={classNames(styles["container"])}
+      style={{ height: "calc(var(--vh, 1vh) * 70)" }}
+    >
       <Toolbar />
       <div className={classNames(styles["input-group"])}>
         <input

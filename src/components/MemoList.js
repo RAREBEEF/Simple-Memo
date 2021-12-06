@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useCallback, useState } from "react";
 import Toolbar from "./Toolbar";
 
-export default function MemoList() {
+export default function MemoList({ vh }) {
   // 체크박스 state, Toolbar 컴포넌트에 전달한다.
   const [checked, setChecked] = useState([]);
   // 검색어 state, Toolbar 컴포넌트에 전달한다.
@@ -39,7 +39,10 @@ export default function MemoList() {
 
   // 검색어가 있다면 검색된 메모만, 검색어가 없다면 모든 메모를 출력한다.
   return (
-    <div className={classNames(styles["container"])}>
+    <div
+      className={classNames(styles["container"])}
+      style={{ height: "calc(var(--vh, 1vh) * 70)" }}
+    >
       <Toolbar
         checked={checked}
         setChecked={setChecked}
