@@ -61,11 +61,6 @@
         right: 5px;
         bottom: 0;
       }
-      // 모바일 gsap 버그 픽스
-      &::placeholder {
-        position: relative;
-        top: 0;
-      }
     }
     .input--memo {
       resize: none;
