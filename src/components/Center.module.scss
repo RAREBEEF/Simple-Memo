@@ -3,15 +3,9 @@
     width: 95% !important;
   }
 }
+
 .container {
   $light-gray: #bcb8b1;
-  .not-found {
-    position: absolute;
-    z-index: 0;
-    text-align: center;
-    font-weight: 900;
-    font-size: 30px;
-  }
   display: flex;
   flex-direction: column;
   border-radius: 5px;
