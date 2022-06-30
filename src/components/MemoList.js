@@ -63,7 +63,7 @@ export default function MemoList({ vh }) {
                       />
                       <NavLink
                         className={classNames(styles["link"])}
-                        to={`/memo/${item.time}`}
+                        to={`/${item.time}`}
                       >
                         <span className={classNames(styles["title"])}>
                           {item.title}
@@ -89,7 +89,7 @@ export default function MemoList({ vh }) {
                     />
                     <NavLink
                       className={classNames(styles["link"])}
-                      to={`/memo/${item.time}`}
+                      to={`/${item.time}`}
                     >
                       <span className={classNames(styles["title"])}>
                         {item.title}

@@ -108,7 +108,7 @@ export default function Toolbar({ checked, setChecked, setSearchRegexp }) {
           url[3] !== "input" && (
             <NavLink
               className={classNames(styles["btn"], styles["btn--input"])}
-              to={`/input/${id}`}
+              to={`/edit/${id}`}
             >
               Edit
               <span className={classNames(styles["text--disappear"])}>

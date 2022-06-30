@@ -11,11 +11,10 @@ export default function Center({ vh }) {
       className={classNames(styles["container"])}
       style={{ height: "calc(var(--vh, 1vh) * 70)" }}
     >
-      <div className={classNames(styles["not-found"])}>404 Not Found. </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/memo/:id" element={<MemoView vh={vh} />}></Route>
-          <Route path="/input/:id" element={<TextInput />}></Route>
+          <Route path="/:id" element={<MemoView vh={vh} />}></Route>
+          <Route path="/edit/:id" element={<TextInput />}></Route>
           <Route path="/input/" exact element={<TextInput vh={vh} />}></Route>
           <Route path="/" exact element={<MemoList vh={vh} />}></Route>
           <Route element={<ErrorFilter />}></Route>

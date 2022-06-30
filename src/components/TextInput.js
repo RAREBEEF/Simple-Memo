@@ -75,7 +75,7 @@ export default function TextInput({ vh }) {
           order: Date.parse(now),
         })
       );
-      navigate(`/memo/${key}`);
+      navigate(`/${key}`);
     }
   }, [navigate, valueMemo, valueTitle, id, vibrate]);
 
