@@ -5,18 +5,16 @@ import TextInput from "./TextInput";
 import MemoList from "./MemoList";
 import MemoView from "./MemoView";
 import ErrorFilter from "./ErrorFilter";
-export default function Center({ vh }) {
+
+export default function Center() {
   return (
-    <div
-      className={classNames(styles["container"])}
-      style={{ height: "calc(var(--vh, 1vh) * 70)" }}
-    >
+    <div className={classNames(styles["container"])} style={{ height: "70vh" }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/:id" element={<MemoView vh={vh} />}></Route>
+          <Route path="/memo/:id" element={<MemoView />}></Route>
           <Route path="/edit/:id" element={<TextInput />}></Route>
-          <Route path="/input/" exact element={<TextInput vh={vh} />}></Route>
-          <Route path="/" exact element={<MemoList vh={vh} />}></Route>
+          <Route path="/input/" exact element={<TextInput />}></Route>
+          <Route path="/" exact element={<MemoList />}></Route>
           <Route element={<ErrorFilter />}></Route>
         </Routes>
       </BrowserRouter>

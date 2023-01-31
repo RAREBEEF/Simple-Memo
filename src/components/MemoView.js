@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router";
 import styles from "./MemoView.module.scss";
 import Toolbar from "./Toolbar";
 
-export default function MemoView({ vh }) {
+export default function MemoView() {
   const id = useParams().id;
   const navigate = useNavigate();
 
@@ -16,14 +16,11 @@ export default function MemoView({ vh }) {
   }, [id, navigate]);
 
   return (
-    <div
-      className={classNames(styles["container"])}
-      style={{ height: "calc(var(--vh, 1vh) * 70)" }}
-    >
+    <div className={classNames(styles["container"])} style={{ height: "70vh" }}>
       <Toolbar />
       <div
         className={classNames(styles["section-text"])}
-        style={{ height: "calc(var(--vh, 1vh) * 50)" }}
+        style={{ height: "50vh" }}
       >
         <div className={classNames(styles["memo--header"])}>
           <h2 className={classNames(styles["title"])}>
